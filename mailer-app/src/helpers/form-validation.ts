@@ -45,5 +45,9 @@ export const validate = (values: MailerOptions) => {
   errors = validateEmails('cc', values.cc, errors, true)
   errors = validateEmails('bcc', values.bcc, errors, true)
 
+  if (!values.provider || values.provider === 'Please select the provider') {
+    errors.provider = 'Required'
+  }
+
   return errors
 }

@@ -12,7 +12,8 @@ export const sendMail = [
     }
 
     try {
-      await sendEmail(Providers.SEND_GRID, { ...req.body })
+      const provider = req.body.provider
+      await sendEmail(provider, { ...req.body })
     } catch (error) {
       return res.status(500).json({ errors: [error.message] })
     }

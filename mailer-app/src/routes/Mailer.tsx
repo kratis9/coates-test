@@ -50,7 +50,7 @@ export default function Mailer() {
         className='mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8'
       >
         <FormControl
-          type='text'
+          type='select'
           label='Provider'
           controlName='provider'
           placeholder=''

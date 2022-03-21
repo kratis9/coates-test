@@ -75,7 +75,23 @@ export default function FormControl({
             value={value}
           />
         )}
+        {type === 'select' && (
+          <select
+            id={controlName}
+            name={controlName}
+            onBlur={onBlur}
+            onChange={onChange}
+            className='form-select form-select-lg mb-3 appearance-none block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding bg-no-repeat border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none'
+            aria-label='.form-select-lg example'
+          >
+            <option selected>Please select the provider</option>
+            <option value='0'>SendGrid</option>
+            <option value='1'>MailTrap</option>
+            <option value='3'>MailChimp</option>
+          </select>
+        )}
       </div>
+
       {error ? <ErrorComp errors={error} /> : null}
     </div>
   )

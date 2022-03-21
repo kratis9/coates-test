@@ -5,8 +5,8 @@ import { MailTrapMailerService } from './mail-trap.service'
 
 export enum Providers {
   SEND_GRID,
-  MAIL_CHIMPS,
   MAIL_TRAP,
+  MAIL_CHIMPS,
 }
 
 const ProvidersMailer = {
