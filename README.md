@@ -41,3 +41,5 @@ Open (http://localhost:3000(UI)|4000(Server)) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
+<img width="1564" alt="Screen Shot 2022-03-21 at 2 48 39 pm" src="https://user-images.githubusercontent.com/24910937/159203649-54580e49-5d9a-48b7-96c7-3614151a55bf.png">
+<img width="1619" alt="Screen Shot 2022-03-21 at 2 48 27 pm" src="https://user-images.githubusercontent.com/24910937/159203653-2791d463-ee18-4008-b837-8829e7d54036.png">
