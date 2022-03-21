@@ -19,7 +19,6 @@ Based on the occupancy, I haven't write tests to my code that I want to do and I
 
 ### TODOs
 
-- [ ] Typescript implementation
 - [ ] Add API tests
 - [ ] Add Unit tests(UI)
 - [ ] Add Cypress tests(UI)
