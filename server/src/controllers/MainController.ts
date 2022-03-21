@@ -12,7 +12,7 @@ export const sendMail = [
     }
 
     try {
-      await sendEmail(Providers.MAIL_TRAP, { ...req.body })
+      await sendEmail(Providers.SEND_GRID, { ...req.body })
     } catch (error) {
       return res.status(500).json({ errors: [error.message] })
     }

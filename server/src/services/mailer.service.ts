@@ -1,3 +1,6 @@
+import { Transporter } from 'nodemailer'
+import SMTPTransport from 'nodemailer/lib/smtp-transport'
+
 export interface MailerOptions {
   to: string[]
   cc?: string[]
@@ -6,6 +9,7 @@ export interface MailerOptions {
   body: string
 }
 export interface MailerService {
+  transporter: Transporter<SMTPTransport.SentMessageInfo>
   send(mailerOptions: MailerOptions)
 }
 
