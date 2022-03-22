@@ -1,8 +1,8 @@
 export interface MailerOptions {
-  to: ''
-  cc?: ''
-  bcc?: ''
-  subject: string
-  body: string
+  to: string
+  cc?: string
+  bcc?: string
+  subject?: string
+  body?: string
   provider: string
 }

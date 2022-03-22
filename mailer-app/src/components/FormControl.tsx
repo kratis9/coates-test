@@ -1,11 +1,5 @@
 import React, { ChangeEvent } from 'react'
 
-function ErrorComp({ errors }: { errors: string | Record<string, string> }) {
-  return typeof errors === 'string' ? (
-    <div className='text-left text-red-500'>{errors}</div>
-  ) : null
-}
-
 interface ControlProps {
   label: string
   type?: string
@@ -13,8 +7,8 @@ interface ControlProps {
   controlName: string
   isOptional?: boolean
   options?: string[]
-  value: string
-  error?: string | Record<string, string>
+  value?: string
+  error?: string
   onBlur: (eventOrString: any) => void | ((e: any) => void)
   onChange: (
     eventOrPath: string | ChangeEvent<any>
@@ -99,7 +93,7 @@ export default function FormControl({
         )}
       </div>
 
-      {error ? <ErrorComp errors={error} /> : null}
+      {error ? <div className='text-left text-red-500'>{error}</div> : null}
     </div>
   )
 }

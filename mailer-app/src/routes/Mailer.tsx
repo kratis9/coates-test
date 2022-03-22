@@ -42,6 +42,7 @@ export default function Mailer() {
         .then((res) => dispatch(update(values)))
     },
   })
+
   return (
     <div className='col-span-8 py-10 px-6 sm:px-10 xl:p-12'>
       <h3 className='text-lg font-medium text-warm-gray-900'>Send Emails</h3>
@@ -70,6 +71,7 @@ export default function Mailer() {
           error={formik.errors.to}
           onBlur={formik.handleBlur}
         />
+        <pre>{JSON.stringify(formik.errors)}</pre>
         <FormControl
           type='text'
           label='CC'
@@ -77,7 +79,7 @@ export default function Mailer() {
           controlName='cc'
           isOptional={true}
           onChange={formik.handleChange}
-          value={formik.values.cc || ''}
+          value={formik.values.cc}
           error={formik.errors.cc}
           onBlur={formik.handleBlur}
         />
@@ -88,7 +90,7 @@ export default function Mailer() {
           controlName='bcc'
           isOptional={true}
           onChange={formik.handleChange}
-          value={formik.values.bcc || ''}
+          value={formik.values.bcc}
           error={formik.errors.bcc}
           onBlur={formik.handleBlur}
         />
