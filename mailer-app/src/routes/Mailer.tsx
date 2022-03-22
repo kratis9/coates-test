@@ -54,6 +54,7 @@ export default function Mailer() {
           label='Provider'
           controlName='provider'
           placeholder=''
+          options={['SendGrid', 'MailTrap', 'MailChimp']}
           onChange={formik.handleChange}
           value={formik.values.provider}
           error={formik.errors.provider}
@@ -66,7 +67,7 @@ export default function Mailer() {
           controlName='to'
           onChange={formik.handleChange}
           value={formik.values.to}
-          error={formik.errors?.to}
+          error={formik.errors.to}
           onBlur={formik.handleBlur}
         />
         <FormControl
@@ -74,9 +75,10 @@ export default function Mailer() {
           label='CC'
           placeholder='Recipients(Comma Separated)'
           controlName='cc'
+          isOptional={true}
           onChange={formik.handleChange}
-          value={formik.values?.cc || ''}
-          error={formik.errors?.cc}
+          value={formik.values.cc || ''}
+          error={formik.errors.cc}
           onBlur={formik.handleBlur}
         />
         <FormControl
@@ -84,15 +86,17 @@ export default function Mailer() {
           label='BCC'
           placeholder='Recipients(Comma Separated)'
           controlName='bcc'
+          isOptional={true}
           onChange={formik.handleChange}
           value={formik.values.bcc || ''}
-          error={formik.errors?.bcc}
+          error={formik.errors.bcc}
           onBlur={formik.handleBlur}
         />
         <FormControl
           type='text'
           label='Subject'
           controlName='subject'
+          isOptional={true}
           onChange={formik.handleChange}
           value={formik.values.subject}
           error={formik.errors.subject}
@@ -102,6 +106,7 @@ export default function Mailer() {
           type='textarea'
           label='Body'
           controlName='body'
+          isOptional={true}
           onChange={formik.handleChange}
           value={formik.values.body}
           error={formik.errors.body}
