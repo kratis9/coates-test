@@ -22,7 +22,7 @@ Based on the occupancy, I haven't write tests to my code that I want to do and I
 - [ ] Add API tests
 - [ ] Add Unit tests(UI)
 - [ ] Add Cypress tests(UI)
-- [ ] Code Deployment CI/CD
+- [ ] Code Deployment CI/CD - https://coates-mailer-app.netlify.app/
 
 ## Available Scripts
 
