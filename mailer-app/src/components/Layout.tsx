@@ -1,5 +1,5 @@
 import { Outlet } from 'react-router-dom'
-import { MailerNav } from './Nav'
+import Nav from './Nav'
 
 export function Layout() {
   return (
@@ -9,7 +9,7 @@ export function Layout() {
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
             <div className='relative bg-white shadow-xl'>
               <div className='grid grid-cols-12'>
-                <MailerNav />
+                <Nav />
                 <Outlet />
               </div>
             </div>

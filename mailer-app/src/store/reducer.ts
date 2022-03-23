@@ -5,7 +5,6 @@ export const historySlice = createSlice({
   name: 'history',
   initialState: {
     sent: [] as MailerOptions[],
-    action: {},
   },
   reducers: {
     update: (state, action) => {

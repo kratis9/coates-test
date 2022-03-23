@@ -1,7 +1,7 @@
 import { Request, Response } from 'express'
 import { checkSchema, validationResult } from 'express-validator'
 import mailSchema from '../schemas/mail.schema'
-import { Providers, sendEmail } from '../services/api'
+import { sendEmail } from '../services/api'
 
 export const sendMail = [
   checkSchema(mailSchema),

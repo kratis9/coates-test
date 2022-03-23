@@ -3,7 +3,6 @@ import { useFormik } from 'formik'
 import axios from 'axios'
 import { toArray, validate } from '../helpers/form-validation'
 import { MailerOptions } from '../types'
-
 import { useDispatch } from 'react-redux'
 import { update } from '../store/reducer'
 
@@ -48,8 +47,7 @@ export default function Mailer() {
       <h3 className='text-lg font-medium text-warm-gray-900'>Send Emails</h3>
       <form
         onSubmit={formik.handleSubmit}
-        className='mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8'
-      >
+        className='mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8'      >
         <FormControl
           type='select'
           label='Provider'
@@ -71,7 +69,6 @@ export default function Mailer() {
           error={formik.errors.to}
           onBlur={formik.handleBlur}
         />
-        <pre>{JSON.stringify(formik.errors)}</pre>
         <FormControl
           type='text'
           label='CC'

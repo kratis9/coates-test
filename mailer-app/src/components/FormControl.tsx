@@ -46,9 +46,7 @@ export default function FormControl({
       <div className='mt-1'>
         {type === 'text' && (
           <input
-            className={`py-3 px-4 block w-full shadow-sm text-warm-gray-900 focus:ring-teal-500 focus:border-teal-500 border-warm-gray-300 rounded-md ${
-              error ? 'border-red-500' : ''
-            }`}
+            className={`py-3 px-4 block w-full shadow-sm text-warm-gray-900 focus:ring-teal-500 focus:border-teal-500 border-warm-gray-300 rounded-md`}
             placeholder={placeholder}
             id={controlName}
             name={controlName}
@@ -61,9 +59,8 @@ export default function FormControl({
         {type === 'textarea' && (
           <textarea
             aria-describedby='message-max'
-            className={`py-3 px-4 block w-full shadow-sm text-warm-gray-900 focus:ring-teal-500 focus:border-teal-500 border border-warm-gray-300 rounded-md ${
-              error ? 'border-red-500' : ''
-            }`}
+            className={`py-3 px-4 block w-full shadow-sm text-warm-gray-900 focus:ring-teal-500 focus:border-teal-500 border border-warm-gray-300 rounded-md 
+            `}
             placeholder={placeholder}
             id={controlName}
             name={controlName}

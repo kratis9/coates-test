@@ -9,8 +9,8 @@ export default {
   to: {
     isArray: true,
     custom: {
-      options: (toArray) => {
-        return toSafeArray(toArray).every((email) => isEmailValid(email))
+      options: (to) => {
+        return toSafeArray(to).every((email) => isEmailValid(email))
       },
     },
     errorMessage: 'errors.to.invalid',
@@ -18,8 +18,8 @@ export default {
   cc: {
     isArray: true,
     custom: {
-      options: (toArray) => {
-        return toSafeArray(toArray).every((email) => isEmailValid(email))
+      options: (cc) => {
+        return toSafeArray(cc).every((email) => isEmailValid(email))
       },
     },
     errorMessage: 'errors.cc.invalid',
@@ -28,8 +28,8 @@ export default {
     isArray: true,
     optional: { options: { nullable: true } },
     custom: {
-      options: (toArray) => {
-        return toSafeArray(toArray).every((email) => isEmailValid(email))
+      options: (bcc) => {
+        return toSafeArray(bcc).every((email) => isEmailValid(email))
       },
       errorMessage: 'errors.bcc.invalid',
     },
